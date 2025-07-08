@@ -1,8 +1,10 @@
 LoadingDialog
 ==
+仿照ios的一个loading，但是自己太懒了，就去找了一个不维护的，感觉比较像的迁移到AndroidX，甚至连readme都是全是他的别人的。
+==
 效果图
 --
-![](https://github.com/gittjy/LoadingDialog/raw/master/demogif/自定义加载Dialog.gif)  
+![](https://github.com/hongwang311/LoadingDialog/tree/main/demogif/自定义加载Dialog.gif)  
 
 
 
