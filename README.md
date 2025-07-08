@@ -27,7 +27,7 @@ allprojects {
 
 ```
 dependencies {
-implementation 'com.github.hongwang311:LoadingDialog:1.0.7'
+implementation 'com.github.hongwang311:LoadingDialog:1.0.8'
 	}
 ```
 3、在代码中使用

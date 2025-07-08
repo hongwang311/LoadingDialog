@@ -7,7 +7,8 @@ import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
-import com.android.tu.mloadingdialog.R;
+
+import com.android.tu.loadingdialog.LoadingDialog;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 

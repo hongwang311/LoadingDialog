@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+import com.hong.loadingdialog.R;
 
 /**
  * Created by tjy on 2017/6/19.
