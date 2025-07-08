@@ -23,6 +23,6 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.13.2'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.github.hongwang311:LoadingDialog:1.0.3'
+    implementation 'com.github.hongwang311:LoadingDialog:1.0.5'
 //    implementation project(':loadingdialog')
 }

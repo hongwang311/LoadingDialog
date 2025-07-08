@@ -1,44 +1,56 @@
-apply plugin: 'com.android.library'
-apply plugin: 'maven-publish'
-
-group='com.github.hongwang311'
-
-publishing {
-    publications {
-        release(MavenPublication) {
-            // 如果是 Android 项目用这个：
-            afterEvaluate {
-                from components.release
-            }
-
-            // 这些信息供 JitPack 识别和引用
-            groupId = 'com.github.hongwang311'  // GitHub 用户名
-            artifactId = 'LoadingDialog'               // 比如 loadingdialog
-            version = '1.0.4'                   // Tag 一致
-        }
-    }
+plugins {
+    id 'com.android.library'
+//    id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
 }
 
-
 android {
-    compileSdk 35
-    namespace 'com.android.tu.loadingdialog'
+    namespace 'com.hong.loadingdialog'
+    compileSdk 34
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 35
-        versionCode 1
-        versionName "1.0"
+        minSdk 21
+        targetSdk 34
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    publishing {
+        // 🔧 告诉 Gradle 发布哪个构建变种（release）
+        singleVariant("release")
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    testImplementation 'junit:junit:4.13.2'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+}
+
+// 🔧 发布配置
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.github.hongwang311'
+            artifactId = 'loadingdialog'
+            version = '1.0.5'
+
+            // 🔧 注意这里一定要写在 afterEvaluate 块中
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
 }
