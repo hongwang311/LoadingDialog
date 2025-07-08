@@ -45,7 +45,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.github.hongwang311'
             artifactId = 'loadingdialog'
-            version = '1.0.5'
+            version = '1.0.6'
 
             // 🔧 注意这里一定要写在 afterEvaluate 块中
             afterEvaluate {
