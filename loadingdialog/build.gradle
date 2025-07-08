@@ -1,7 +1,24 @@
 apply plugin: 'com.android.library'
-//apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'maven-publish'
 
 group='com.github.hongwang311'
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            // 如果是 Android 项目用这个：
+            afterEvaluate {
+                from components.release
+            }
+
+            // 这些信息供 JitPack 识别和引用
+            groupId = 'com.github.hongwang311'  // GitHub 用户名
+            artifactId = 'LoadingDialog'               // 比如 loadingdialog
+            version = '1.0.4'                   // Tag 一致
+        }
+    }
+}
+
 
 android {
     compileSdk 35

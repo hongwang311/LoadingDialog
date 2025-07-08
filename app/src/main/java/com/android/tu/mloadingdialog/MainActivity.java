@@ -9,8 +9,6 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import com.android.tu.mloadingdialog.R;
 
-import com.android.tu.loadingdialog.LoadingDialog;
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     Button btn1,btn2;

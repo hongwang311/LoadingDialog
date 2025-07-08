@@ -1,9 +1,10 @@
 LoadingDialog
 ==
-仿照ios的一个loading，但是自己太懒了，就去找了一个不维护的，感觉比较像的迁移到AndroidX，甚至连readme都是全是别人的。
+仿照ios的一个loading，但是自己太懒了，就去找了一个不维护的，感觉比较像的迁移到AndroidX。
 --
-如下是引用地址,
+这是引用地址,
 [GitHub - gittjy/LoadingDialog: 仿ios的加载弹窗](https://github.com/gittjy/LoadingDialog)
+--
 效果图
 --
 ![](https://github.com/hongwang311/LoadingDialog/tree/main/demogif/自定义加载Dialog.gif)  
@@ -26,7 +27,7 @@ allprojects {
 
 ```
 dependencies {
-	        compile 'com.github.gittjy:LoadingDialog:1.0.2'
+implementation 'com.github.hongwang311:LoadingDialog:1.0.4'
 	}
 ```
 3、在代码中使用
