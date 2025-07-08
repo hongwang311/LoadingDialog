@@ -7,7 +7,7 @@ LoadingDialog
 --
 效果图
 --
-![](https://github.com/hongwang311/LoadingDialog/tree/main/demogif/自定义加载Dialog.gif)  
+![](https://raw.githubusercontent.com/hongwang311/LoadingDialog/refs/heads/main/demogif/自定义加载Dialog.gif)  
 
 
 
